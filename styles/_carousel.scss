@@ -1,0 +1,57 @@
+.hero-section {
+	width: 85%;
+	margin: 12rem auto 1rem;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-banner.png") center/cover no-repeat;
+	border-radius: 15px;
+	color: white;
+	padding: 6rem 8rem;
+	&-content {
+		width: 90%;
+		margin: 0 auto;
+		h1 {
+			font-size: 5rem;
+			font-style: italic;
+		}
+		h2 {
+			margin: 1.5rem 0 0.5rem;
+		}
+	}
+	.buttons-cta {
+		display: flex;
+		gap: 30px;
+		button {
+			i {
+				background-color: transparent;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+@media (max-width: $medium) {
+	.hero-section {
+		padding: 2rem 2rem;
+	}
+}
+
+@media (max-width: $small) {
+	.hero-section {
+		width: unset;
+		border-radius: unset;
+		margin: 8rem 0 2rem;
+		padding: unset;
+		&-content {
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				margin: 1rem 0 0.2rem;
+			}
+		}
+		.buttons-cta {
+			gap: 0;
+			justify-content: space-around;
+			padding-bottom: 2rem;
+		}
+	}
+}

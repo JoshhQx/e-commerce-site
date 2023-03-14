@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Stoke&display=swap");
+@import "_variables.scss";
+@import "_navbar.scss";
+@import "_products.scss";
+@import "_card.scss";
+@import "_services.scss";
+@import "_about-us.scss";
+@import "_product-details.scss";
+@import "_my-bag.scss";
+@import "_tooltip.scss";
+@import "_checkout.scss";
+@import "_book-services.scss";
+@import "_carousel.scss";
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: $font-style-primary;
+	scroll-behavior: smooth;
+	transition: 0.2s ease-in-out;
+}

@@ -1,0 +1,71 @@
+.card {
+	margin: 1rem 0;
+	background-color: $gray-accent;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	&-header {
+		width: 30%;
+		text-align: center;
+		i {
+			color: #ffb800;
+		}
+	}
+	&-content {
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+		h2 {
+			margin-bottom: 1rem;
+		}
+		.color-variation {
+			margin: 10px 0;
+			display: flex;
+			align-items: baseline;
+			justify-content: center;
+			input[type="radio"] {
+				display: none;
+			}
+
+			label {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin: 5px;
+				border-radius: 50%;
+				border: 2px solid #ccc;
+				cursor: pointer;
+			}
+
+			input[type="radio"]:checked + label {
+				border-color: black;
+			}
+
+			.arrow {
+				display: inline-block;
+				font-size: 30px;
+				margin: 0 10px;
+				cursor: pointer;
+			}
+		}
+		h3 {
+			opacity: 50%;
+		}
+		button {
+			margin-top: 1.5rem;
+			border-radius: 20px;
+			border: none;
+			background-color: $primary-color;
+			padding: 1rem;
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+	&-price,
+	&-description {
+		font-family: $font-style-secondary;
+	}
+}

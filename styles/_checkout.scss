@@ -1,0 +1,99 @@
+.checkout {
+	width: 85%;
+	margin: 12rem auto 1rem;
+	&-title {
+		font-size: 2rem;
+	}
+	&-content-address {
+		&-title {
+			margin-top: 2rem;
+			display: flex;
+			align-items: center;
+			background-color: $gray-accent;
+			border-radius: 15px;
+			padding: 1rem 1.5rem;
+			i {
+				color: $primary-color;
+				font-size: 2.5rem;
+				margin-right: 2rem;
+			}
+		}
+		p,
+		span {
+			font-family: $font-style-secondary;
+			margin-top: 1rem;
+			padding-left: 1rem;
+			display: inline-block;
+		}
+		span {
+			font-weight: bold;
+		}
+		h5 {
+			display: inline;
+			color: $primary-color;
+			border-bottom: 1px solid $primary-color;
+			margin-left: 1rem;
+		}
+	}
+	&-content-products,
+	&-content-services {
+		&-title {
+			background-color: $gray-accent;
+			border-radius: 15px;
+			padding: 1rem 1.5rem;
+			margin-top: 2rem;
+		}
+	}
+	&-content-payment {
+		margin-top: 1rem;
+		display: flex;
+		.courier-container {
+			width: 22rem;
+			margin-right: 5rem;
+		}
+		&-courier {
+			margin-top: 1rem;
+			.couriers {
+				margin-top: 1rem;
+				display: flex;
+				justify-content: space-around;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				padding: 1rem;
+				align-items: center;
+				background-color: $gray-accent;
+				input[type="radio"] {
+					width: 15px;
+					height: 15px;
+				}
+				&-content {
+					h4 {
+						font-family: $font-style-secondary;
+					}
+					p {
+						color: silver;
+					}
+				}
+				img {
+					width: 50px;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					padding: 0.3rem;
+				}
+			}
+			&:hover {
+				border-radius: 15px;
+			}
+		}
+		.payment-method-card {
+			margin-top: 1rem;
+			text-align: center;
+			padding: 1rem;
+			border-radius: 10px;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			background-color: $gray-accent;
+			&:hover {
+				background-color: $orange-accent;
+			}
+		}
+	}
+}

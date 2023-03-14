@@ -200,3 +200,19 @@
 		width: 40%;
 	}
 }
+@media (max-width: $small) {
+	.product-details {
+		flex-direction: column;
+	}
+	.product-texts {
+		width: 100%;
+	}
+	.reviews {
+		width: 100%;
+		flex-direction: column;
+		padding: 1rem;
+		.right-review {
+			width: 100%;
+		}
+	}
+}

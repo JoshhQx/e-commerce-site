@@ -494,6 +494,22 @@ nav .navbar-toggler {
     width: 40%;
   }
 }
+@media (max-width: 426px) {
+  .product-details {
+    flex-direction: column;
+  }
+  .product-texts {
+    width: 100%;
+  }
+  .reviews {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .reviews .right-review {
+    width: 100%;
+  }
+}
 .my-bag {
   width: 85%;
   margin: 10rem auto 2rem;

@@ -13,7 +13,7 @@ const productHTML = `<div class="card">
     <h4>2,115 Ratings</h4>
 </div>
 <div class="card-content">
-    <img src="/images/lipgloss-product.png" alt="lipgloss" />
+    <img src="./images/lipgloss-product.png" alt="lipgloss" />
     <h2>SATIN LIP GLOSS</h2>
     <h2 class= "card-price">₱250</h2>
     <p class = "card-description">Creamy, Medium Buildable Coverage , Satin Finish</p>

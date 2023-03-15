@@ -61,7 +61,7 @@ nav {
 		}
 		.navbar-links {
 			flex-direction: column;
-			margin-top: 20rem;
+			margin-top: 21rem;
 			background-color: $gray-accent;
 			li {
 				margin-top: 1rem;
@@ -71,6 +71,7 @@ nav {
 			display: block;
 		}
 		.navbar-collapse {
+			padding-bottom: 1rem;
 			display: none;
 			position: absolute;
 			width: 100%;

@@ -859,6 +859,7 @@ nav .navbar-toggler {
 .service-form-content .date-picker label input[type=date],
 .service-form-content .date-picker label input[type=time] {
   margin-left: 1rem;
+  font-family: "Stoke", serif;
 }
 .service-form-content .important {
   color: #ff878b;

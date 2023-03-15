@@ -2,8 +2,9 @@
 	width: 85%;
 	margin: 12rem auto 0;
 	background-color: $gray-accent;
-	padding: 1rem;
 	border-radius: 5px;
+	padding: 1rem;
+	box-sizing: border-box;
 	&-title {
 		font-size: 2rem;
 	}
@@ -89,6 +90,20 @@
 			background-color: $primary-color;
 			border: none;
 			border-radius: 5px;
+		}
+	}
+}
+
+@media (max-width: $medium) {
+	.service-form {
+		width: 100%;
+		margin: 8rem auto 0;
+		&-content {
+			.checkboxes {
+				.col {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

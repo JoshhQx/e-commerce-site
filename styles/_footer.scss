@@ -1,17 +1,14 @@
 footer {
-	margin-top: 40rem;
 	background-color: $primary-color;
-	position: relative;
+	margin-top: 5rem;
 	.footer {
-		margin: 0 auto;
-		padding: 3rem;
+		padding: 3rem 3rem 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
+		flex-wrap: wrap;
 		&-socials {
 			display: flex;
-			padding: 2rem 2rem;
-			border-right: 1px solid black;
 			align-items: center;
 			gap: 20px;
 			&-icons {
@@ -22,8 +19,6 @@ footer {
 			display: flex;
 			align-items: center;
 			gap: 20px;
-			padding: 2rem 2rem;
-			border-right: 1px solid black;
 			&-logos {
 				img {
 					width: 50px;
@@ -34,6 +29,110 @@ footer {
 					border-radius: 3px;
 				}
 			}
+		}
+		&-contacts {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			.contacts {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				&-details {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+				}
+			}
+		}
+		&-terms {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			a {
+				color: black;
+			}
+		}
+		&-download {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			.qr-code {
+				img {
+					width: 60px;
+				}
+			}
+			.stores {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-top: 1rem;
+				img {
+					width: 80px;
+				}
+			}
+		}
+	}
+	h3 {
+		text-align: center;
+		opacity: 50%;
+		padding-bottom: 2rem;
+	}
+	hr {
+		height: 100px;
+		border-color: black;
+	}
+}
+
+@media (max-width: $large) {
+	footer {
+		.footer {
+			&-socials,
+			&-logistics,
+			&-contacts {
+				display: unset;
+			}
+		}
+	}
+}
+
+@media (max-width: $medium) {
+	footer {
+		hr {
+			visibility: hidden;
+			padding: 0 1rem;
+		}
+	}
+}
+@media (max-width: $small) {
+	footer {
+		.footer {
+			padding: 1rem 0.3rem;
+			align-items: unset;
+			justify-content: space-evenly;
+			&-socials,
+			&-logistics {
+				&-icons,
+				&-logos {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin: 1rem 0;
+					gap: 10px;
+				}
+			}
+			&-contacts {
+				.contacts {
+					margin-top: 0.5rem;
+					gap: 10px;
+				}
+			}
+			&-terms {
+				margin-top: 0.5rem;
+			}
+		}
+		hr {
+			border-color: transparent;
 		}
 	}
 }

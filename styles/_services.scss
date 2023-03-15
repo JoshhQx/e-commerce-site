@@ -15,14 +15,14 @@
 		color: white;
 		margin-top: 2rem;
 		text-align: center;
-		position: relative;
+		border-radius: 15px;
 	}
 	&-listing {
 		display: flex;
 		flex-wrap: wrap;
-		position: absolute;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		width: 90%;
+		margin: -60px auto 0;
 	}
 	&-card {
 		color: black;
@@ -32,10 +32,25 @@
 		width: 30rem;
 	}
 }
-
+@media (max-width: $large) {
+	.services-card {
+		width: 25rem;
+	}
+}
 @media (max-width: $medium) {
-	.services-listing {
-		justify-content: unset;
+	.services {
+		p {
+			width: 90%;
+		}
+		&-banner {
+			padding: 3rem;
+		}
+		&-card {
+			width: 35rem;
+		}
+		&-listing {
+			margin-top: -50px;
+		}
 	}
 }
 @media (max-width: $small) {
@@ -53,9 +68,10 @@
 		&-banner {
 			width: unset;
 			padding: unset;
+			border-radius: unset;
 		}
 		&-listing {
-			width: 100%;
+			margin-top: -35px;
 		}
 	}
 }

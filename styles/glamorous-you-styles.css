@@ -220,14 +220,14 @@ nav .navbar-toggler {
   color: white;
   margin-top: 2rem;
   text-align: center;
-  position: relative;
+  border-radius: 15px;
 }
 .services-listing {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 90%;
+  margin: -60px auto 0;
 }
 .services-card {
   color: black;
@@ -237,9 +237,23 @@ nav .navbar-toggler {
   width: 100%;
 }
 
+@media (max-width: 1025px) {
+  .services-card {
+    width: 25rem;
+  }
+}
 @media (max-width: 769px) {
+  .services p {
+    width: 90%;
+  }
+  .services-banner {
+    padding: 3rem;
+  }
+  .services-card {
+    width: 35rem;
+  }
   .services-listing {
-    justify-content: unset;
+    margin-top: -50px;
   }
 }
 @media (max-width: 426px) {
@@ -256,9 +270,10 @@ nav .navbar-toggler {
   .services-banner {
     width: unset;
     padding: unset;
+    border-radius: unset;
   }
   .services-listing {
-    width: 100%;
+    margin-top: -35px;
   }
 }
 .text-divider {
@@ -784,6 +799,7 @@ nav .navbar-toggler {
 .checkout-content-payment-courier .couriers input[type=radio] {
   width: 15px;
   height: 15px;
+  accent-color: #ff9c5e;
 }
 .checkout-content-payment-courier .couriers-content h4 {
   font-family: "Stoke", serif;
@@ -796,27 +812,47 @@ nav .navbar-toggler {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0.3rem;
 }
-.checkout-content-payment-courier:hover {
-  border-radius: 15px;
+.checkout-content-payment-courier .couriers:hover {
+  background-color: #ffdcc7;
 }
 .checkout-content-payment .payment-method-card {
+  cursor: pointer;
+}
+.checkout-content-payment .payment-method-card input[type=radio] {
+  display: none;
+}
+.checkout-content-payment .payment-method-card h4 {
   margin-top: 1rem;
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #f9f9f9;
+  border-radius: 10px;
 }
-.checkout-content-payment .payment-method-card:hover {
+.checkout-content-payment .payment-method-card h4:hover {
+  background-color: #ffdcc7;
+}
+.checkout-content-payment .payment-method-card input[type=radio]:checked + h4 {
   background-color: #ffdcc7;
 }
 
+@media (max-width: 426px) {
+  .checkout-content-payment {
+    display: unset;
+  }
+  .checkout-content-payment .payment-method-container,
+  .checkout-content-payment .courier-container {
+    margin-top: 1rem;
+  }
+}
 .service-form {
   width: 85%;
   margin: 12rem auto 0;
   background-color: #f9f9f9;
-  padding: 1rem;
   border-radius: 5px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .service-form-title {
   font-size: 2rem;
@@ -904,6 +940,15 @@ nav .navbar-toggler {
   border-radius: 5px;
 }
 
+@media (max-width: 769px) {
+  .service-form {
+    width: 100%;
+    margin: 8rem auto 0;
+  }
+  .service-form-content .checkboxes .col {
+    width: 100%;
+  }
+}
 .hero-section {
   width: 85%;
   margin: 12rem auto 1rem;
@@ -957,21 +1002,18 @@ nav .navbar-toggler {
   }
 }
 footer {
-  margin-top: 40rem;
   background-color: #ff9c5e;
-  position: relative;
+  margin-top: 5rem;
 }
 footer .footer {
-  margin: 0 auto;
-  padding: 3rem;
+  padding: 3rem 3rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 footer .footer-socials {
   display: flex;
-  padding: 2rem 2rem;
-  border-right: 1px solid black;
   align-items: center;
   gap: 20px;
 }
@@ -982,8 +1024,6 @@ footer .footer-logistics {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 2rem 2rem;
-  border-right: 1px solid black;
 }
 footer .footer-logistics-logos img {
   width: 50px;
@@ -993,7 +1033,91 @@ footer .footer-logistics-logos img {
   background-color: white;
   border-radius: 3px;
 }
+footer .footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-contacts .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-contacts .contacts-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-terms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-terms a {
+  color: black;
+}
+footer .footer-download {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-download .qr-code img {
+  width: 60px;
+}
+footer .footer-download .stores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+}
+footer .footer-download .stores img {
+  width: 80px;
+}
+footer h3 {
+  text-align: center;
+  opacity: 50%;
+  padding-bottom: 2rem;
+}
+footer hr {
+  height: 100px;
+  border-color: black;
+}
 
+@media (max-width: 1025px) {
+  footer .footer-socials, footer .footer-logistics, footer .footer-contacts {
+    display: unset;
+  }
+}
+@media (max-width: 769px) {
+  footer hr {
+    visibility: hidden;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 426px) {
+  footer .footer {
+    padding: 1rem 0.3rem;
+    align-items: unset;
+    justify-content: space-evenly;
+  }
+  footer .footer-socials-icons, footer .footer-socials-logos, footer .footer-logistics-icons, footer .footer-logistics-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 10px;
+  }
+  footer .footer-contacts .contacts {
+    margin-top: 0.5rem;
+    gap: 10px;
+  }
+  footer .footer-terms {
+    margin-top: 0.5rem;
+  }
+  footer hr {
+    border-color: transparent;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

@@ -42,8 +42,8 @@ for (let i = 0; i < numOfProducts; i++) {
 	productListing.innerHTML += productHTML;
 }
 
-const navLinks = document.querySelector(".navbar-collapse");
-const barIcon = document.querySelector(".navbar-toggler");
-barIcon.addEventListener("click", () => {
-	navLinks.style.display === "block" ? (navLinks.style.display = "none") : (navLinks.style.display = "block");
+const icon = document.querySelector(".navbar-toggler");
+const collapse = document.querySelector(".navbar-collapse");
+icon.addEventListener("click", () => {
+	collapse.style.display = collapse.style.display == "block" ? "none" : "block";
 });

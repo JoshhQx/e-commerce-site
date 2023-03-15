@@ -74,10 +74,9 @@ nav .navbar-toggler {
   nav .navbar-collapse {
     padding-bottom: 1rem;
     display: none;
-    position: absolute;
-    width: 100%;
+    width: 90%;
     left: 0;
-    right: 0;
+    position: fixed;
   }
 }
 .products {

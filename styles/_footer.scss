@@ -1,3 +1,39 @@
 footer {
-	display: flex;
+	margin-top: 40rem;
+	background-color: $primary-color;
+	position: relative;
+	.footer {
+		margin: 0 auto;
+		padding: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		&-socials {
+			display: flex;
+			padding: 2rem 2rem;
+			border-right: 1px solid black;
+			align-items: center;
+			gap: 20px;
+			&-icons {
+				font-size: 1.2rem;
+			}
+		}
+		&-logistics {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding: 2rem 2rem;
+			border-right: 1px solid black;
+			&-logos {
+				img {
+					width: 50px;
+					height: 30px;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					border-radius: 3px;
+					background-color: white;
+					border-radius: 3px;
+				}
+			}
+		}
+	}
 }

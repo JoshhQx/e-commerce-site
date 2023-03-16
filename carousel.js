@@ -27,6 +27,11 @@ function startSlideshow() {
 	}, slideshowDuration);
 }
 
+// Stop the slideshow
+// function stopSlideshow() {
+// 	clearInterval(slideshowTimer);
+// }
+
 // Navigate to the next image
 function nextImage() {
 	index++;

@@ -1,0 +1,46 @@
+.bar-ratings {
+	margin-top: 1rem;
+	&-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0.5rem 0;
+		span {
+			font-family: $font-stlye-third;
+		}
+		.gray-bar {
+			background-color: silver;
+			width: 80%;
+			border-radius: 5px;
+			height: 18px;
+		}
+		.yellow-bar {
+			background-color: $yellow;
+			height: 100%;
+			border-radius: 5px;
+		}
+		.bar-5 {
+			width: 75%;
+		}
+		.bar-4 {
+			width: 20%;
+		}
+		.bar-3 {
+			width: 5%;
+		}
+		.bar-2,
+		.bar-1 {
+			width: 0;
+		}
+	}
+}
+
+@media (max-width: $medium) {
+	.bar-ratings {
+		&-container {
+			.gray-bar {
+				width: 70%;
+			}
+		}
+	}
+}

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Stoke&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
 nav {
   top: 0;
   position: fixed;
@@ -142,6 +143,11 @@ nav .navbar-toggler {
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card-header {
   width: 30%;
@@ -202,6 +208,26 @@ nav .navbar-toggler {
 }
 .card-price, .card-description {
   font-family: "Stoke", serif;
+}
+.card-images {
+  margin-top: 1rem;
+}
+.card-images label img {
+  width: 4rem;
+  border: 3px solid silver;
+  border-radius: 5px;
+}
+.card-images label img:hover {
+  border-color: #ff9c5e;
+}
+.card-images label [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.card-images label [type=radio]:checked + img {
+  border-color: #ff9c5e;
 }
 
 .services h1 {
@@ -338,12 +364,16 @@ nav .navbar-toggler {
   padding: 0 10px;
 }
 .product-texts .product-stats .number-ratings span {
-  border-bottom: 1px solid #ff9c5e;
+  -webkit-text-decoration: underline #ff9c5e;
+          text-decoration: underline #ff9c5e;
   padding-bottom: 2px;
   font-family: "Stoke", serif;
 }
-.product-texts .product-stats h5 {
+.product-texts .product-stats .number-equivalent {
   font-family: "Stoke", serif;
+  margin-right: 0.5rem;
+  -webkit-text-decoration: underline #ff9c5e;
+          text-decoration: underline #ff9c5e;
 }
 .product-texts h1 {
   font-size: 3rem;
@@ -447,17 +477,39 @@ nav .navbar-toggler {
   border-radius: 15px;
   padding: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.reviews .left-review {
+  width: 33%;
 }
 .reviews .left-review .star-rating {
   margin-top: 0.5rem;
   display: flex;
+  align-items: center;
 }
 .reviews .left-review .star-rating i {
   color: #ffb800;
 }
 .reviews .left-review .star-rating h3 {
   margin-left: 1rem;
+  font-family: "Baloo Thambi 2", cursive;
+}
+.reviews .left-review h1 {
+  font-family: "Baloo Thambi 2", cursive;
+  margin: 1rem auto;
+}
+.reviews .left-review hr {
+  border-color: #ff9c5e;
+  margin: 1.5rem 0;
+}
+.reviews .left-review button {
+  width: 100%;
+  border: none;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 0.8rem 0.5rem;
 }
 .reviews .right-review {
   width: 50%;
@@ -497,8 +549,17 @@ nav .navbar-toggler {
 }
 .reviews .right-review .review-comments-details h5 {
   margin-right: 1rem;
+  font-family: "Baloo Thambi 2", cursive;
+}
+.reviews .right-review .review-comments p {
+  font-family: "Baloo Thambi 2", cursive;
 }
 
+@media (max-width: 1025px) {
+  .reviews .left-review {
+    width: 45%;
+  }
+}
 @media (max-width: 769px) {
   .product-details {
     margin: 6rem auto 2rem;
@@ -516,13 +577,20 @@ nav .navbar-toggler {
   .product-texts {
     width: 100%;
   }
+  .product-specifications {
+    width: 100%;
+  }
   .reviews {
     width: 100%;
     flex-direction: column;
     padding: 1rem;
   }
+  .reviews .left-review,
   .reviews .right-review {
     width: 100%;
+  }
+  .reviews .left-review {
+    margin-bottom: 3rem;
   }
 }
 .my-bag {
@@ -999,6 +1067,48 @@ nav .navbar-toggler {
     gap: 0;
     justify-content: space-around;
     padding-bottom: 2rem;
+  }
+}
+.bar-ratings {
+  margin-top: 1rem;
+}
+.bar-ratings-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.bar-ratings-container span {
+  font-family: "Baloo Thambi 2", cursive;
+}
+.bar-ratings-container .gray-bar {
+  background-color: silver;
+  width: 80%;
+  border-radius: 5px;
+  height: 18px;
+}
+.bar-ratings-container .yellow-bar {
+  background-color: #ffb800;
+  height: 100%;
+  border-radius: 5px;
+}
+.bar-ratings-container .bar-5 {
+  width: 75%;
+}
+.bar-ratings-container .bar-4 {
+  width: 20%;
+}
+.bar-ratings-container .bar-3 {
+  width: 5%;
+}
+.bar-ratings-container .bar-2,
+.bar-ratings-container .bar-1 {
+  width: 0;
+}
+
+@media (max-width: 769px) {
+  .bar-ratings-container .gray-bar {
+    width: 70%;
   }
 }
 footer {

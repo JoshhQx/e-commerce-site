@@ -47,3 +47,23 @@ const collapse = document.querySelector(".navbar-collapse");
 icon.addEventListener("click", () => {
 	collapse.style.display = collapse.style.display == "block" ? "none" : "block";
 });
+
+// const nextArrow = document.querySelector(".arrow-right");
+// const prevArrow = document.querySelector(".arrow-left");
+// const imageContainer = document.querySelector(".hero-section");
+// const images = ["../images/hero-banner.png", "../images/hero-banner-1.png"];
+// let index = 0;
+// imageContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${images[index]}) center/cover no-repeat`;
+
+// nextArrow.addEventListener("click", () => {
+// 	if (index < images.length - 1) {
+// 		index++;
+// 		imageContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${images[index]}) center/cover no-repeat`;
+// 	}
+// });
+// prevArrow.addEventListener("click", () => {
+// 	if (index > 0) {
+// 		index--;
+// 		imageContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${images[index]}) center/cover no-repeat`;
+// 	}
+// });

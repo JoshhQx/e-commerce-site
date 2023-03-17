@@ -1,7 +1,7 @@
 const nextArrowBtn = document.querySelector(".arrow-right");
 const prevArrowBtn = document.querySelector(".arrow-left");
 const imageContainer = document.querySelector(".hero-section");
-const images = ["../images/hero-banner.png", "../images/hero-banner-1.png", "../images/hero-banner-2.png", "../images/hero-banner-3.png"];
+const images = ["../../images/hero-banner.png", "../../images/hero-banner-1.png", "../../images/hero-banner-2.png", "../../images/hero-banner-3.png"];
 const gradient = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))";
 
 let index = 0;
